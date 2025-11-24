@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipy Store - Top Up BBC MLBB Advance Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Warna Mirip Saktistore -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B2CBF', // Ungu Utama
+                        secondary: '#4361EE', // Biru Sekunder
+                        success: '#38B000', // Hijau Sukses
+                        dark: '#121212', // Latar Gelap
+                        card: '#1E1E1E', // Warna Card
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+    <!-- Tambah Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark text-white font-inter">
+    <div class="max-w-md mx-auto px-4 py-8">
+        <!-- Header & Judul Utama -->
+        <div class="text-center mb-8">
+            <h1 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold text-primary text-shadow">TopUp BBC</h1>
+            <p class="text-gray-300 mt-2">MLBB Advance Server</p>
+            <p class="text-gray-400 text-sm mt-1">Dapatkan BBC dengan harga terbaik untuk meningkatkan pengalaman bermain Anda</p>
+        </div>
+
+        <!-- Fitur Keunggulan -->
+        <div class="grid grid-cols-2 gap-4 mb-10">
+            <div class="bg-card p-4 rounded-lg flex flex-col items-center text-center">
+                <span class="text-secondary text-xl mb-2">⚡</span>
+                <p class="text-sm font-medium">Proses Cepat & Aman</p>
+                <p class="text-xs text-gray-400 mt-1">Dikirim dalam 5 menit setelah pembayaran</p>
+            </div>
+            <div class="bg-card p-4 rounded-lg flex flex-col items-center text-center">
+                <span class="text-secondary text-xl mb-2">📦</span>
+                <p class="text-sm font-medium">Berbagai Paket Tersedia</p>
+                <p class="text-xs text-gray-400 mt-1">Sesuai kebutuhan dan budget</p>
+            </div>
+            <div class="bg-card p-4 rounded-lg flex flex-col items-center text-center">
+                <span class="text-secondary text-xl mb-2">💬</span>
+                <p class="text-sm font-medium">Support 24/7</p>
+                <p class="text-xs text-gray-400 mt-1">Bantuan via WhatsApp kapan saja</p>
+            </div>
+            <div class="bg-card p-4 rounded-lg flex flex-col items-center text-center">
+                <span class="text-secondary text-xl mb-2">🎮</span>
+                <p class="text-sm font-medium">MLBB Advance Server</p>
+                <p class="text-xs text-gray-400 mt-1">Untuk akun Advance Server saja</p>
+            </div>
+        </div>
+
+        <!-- Stok Info -->
+        <div class="bg-card p-4 rounded-lg flex items-center mb-8">
+            <span class="text-success font-bold text-xl mr-3">✅</span>
+            <p class="text-sm">Stok Tersedia - Pembelian BBC dapat dilakukan secara normal</p>
+        </div>
+
+        <!-- Judul Kategori Paket -->
+        <div class="text-center mb-6">
+            <h2 class="text-lg font-semibold text-primary">Pilih Kategori</h2>
+            <p class="text-xs text-gray-400 mt-1">Top up BB COIN</p>
+        </div>
+
+        <!-- Grid Paket BBC -->
+        <div class="grid grid-cols-2 gap-4 mb-10">
+            <!-- Paket Pemula -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card" 
+                 data-nama="Paket Pemula" data-bbc="1.000" data-harga="5.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Pemula</p>
+                <p class="text-lg font-bold text-primary mt-1">1.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 5.000</p>
+            </div>
+
+            <!-- Paket Reguler -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card" 
+                 data-nama="Paket Reguler" data-bbc="5.000" data-harga="25.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Reguler</p>
+                <p class="text-lg font-bold text-primary mt-1">5.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 25.000</p>
+            </div>
+
+            <!-- Paket Advanced -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card" 
+                 data-nama="Paket Advanced" data-bbc="10.000" data-harga="50.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Advanced</p>
+                <p class="text-lg font-bold text-primary mt-1">10.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 50.000</p>
+            </div>
+
+            <!-- Paket Elite -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card" 
+                 data-nama="Paket Elite" data-bbc="15.000" data-harga="75.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Elite</p>
+                <p class="text-lg font-bold text-primary mt-1">15.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 75.000</p>
+            </div>
+
+            <!-- Paket Pro -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card" 
+                 data-nama="Paket Pro" data-bbc="20.000" data-harga="100.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Pro</p>
+                <p class="text-lg font-bold text-primary mt-1">20.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 100.000</p>
+            </div>
+
+            <!-- Paket Ultimate -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card" 
+                 data-nama="Paket Ultimate" data-bbc="50.000" data-harga="250.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Ultimate</p>
+                <p class="text-lg font-bold text-primary mt-1">50.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 250.000</p>
+            </div>
+
+            <!-- Paket Max (Tambahan Seperti Saktistore) -->
+            <div class="bg-card rounded-lg p-5 text-center card-hover cursor-pointer border-2 border-transparent paket-card col-span-2" 
+                 data-nama="Paket Max" data-bbc="100.000" data-harga="500.000">
+                <img src="https://via.placeholder.com/40" alt="BBC Icon" class="w-10 h-10 mx-auto mb-3"> <!-- Ganti dengan bbc-icon.png -->
+                <p class="text-xs text-gray-300">Paket Max</p>
+                <p class="text-lg font-bold text-primary mt-1">100.000 BBC</p>
+                <p class="text-sm font-medium text-success mt-2">Rp 500.000</p>
+            </div>
+        </div>
+
+        <!-- Form Input Data Akun -->
+        <div class="bg-card p-5 rounded-lg mb-8">
+            <h3 class="text-sm font-semibold text-primary text-center mb-4">Isi Data Akun MLBB Advance Server</h3>
+            <div class="space-y-4">
+                <input type="text" id="playerId" placeholder="ID Pengguna" 
+                       class="w-full px-4 py-3 rounded-lg bg-dark border border-gray-700 focus:outline-none focus:border-primary text-sm">
+                <input type="text" id="zoneId" placeholder="Zone ID" 
+                       class="w-full px-4 py-3 rounded-lg bg-dark border border-gray-700 focus:outline-none focus:border-primary text-sm">
+            </div>
+        </div>
+
+        <!-- Tombol Bayar Via WhatsApp -->
+        <a href="#" id="waPaymentBtn" class="block w-full bg-[#25D366] hover:bg-[#1EBE57] text-white font-bold py-4 rounded-lg text-center transition-colors flex items-center justify-center gap-2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA Icon" class="w-5 h-5">
+            Bayar Via WhatsApp & Proses Sekarang
+        </a>
+
+        <!-- Footer -->
+        <div class="text-center mt-10 text-xs text-gray-500">
+            <p>&copy; 2025 Dipy Store. Semua Hak Dilindungi.</p>
+            <p class="mt-1">Top Up BBC MLBB Advance Server - Harga Terbaik & Proses Cepat</p>
+        </div>
+    </div>
+
+    <script>
+        // Pilih Paket BBC
+        const paketCards = document.querySelectorAll('.paket-card');
+        let selectedPaket = null;
+
+        paketCards.forEach(card => {
+            card.addEventListener('click', () => {
+                paketCards.forEach(c => c.classList.remove('border-primary'));
+                card.classList.add('border-primary');
+                selectedPaket = {
+                    nama: card.dataset.nama,
+                    bbc: card.dataset.bbc,
+                    harga: card.dataset.harga
+                };
+            });
+        });
+
+        // Fungsi Kirim Pesan ke WhatsApp
+        const waPaymentBtn = document.getElementById('waPaymentBtn');
+        const WA_NUMBER = '6281234567890'; // GANTI DENGAN NOMOR WA ANDA
+
+        waPaymentBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const playerId = document.getElementById('playerId').value;
+            const zoneId = document.getElementById('zoneId').value;
+
+            // Cek Validasi Data
+            if (!playerId || !zoneId || !selectedPaket) {
+                alert('Silakan isi data akun dan pilih paket BBC terlebih dahulu!');
+                return;
+            }
+
+            // Template Pesan Mirip Saktistore
+            const message = `
+Halo Dipy Store! Saya ingin top up BBC MLBB Advance Server.
+
+📋 Data Akun:
+- ID Pengguna: ${playerId}
+- Zone ID: ${zoneId}
+
+📦 Paket Pilihan:
+- ${selectedPaket.nama}
+- ${selectedPaket.bbc} BBC
+- Total Harga: Rp${selectedPaket.harga}
+
+Mohon proses ya, saya akan kirim bukti pembayaran segera. Terima kasih!
+            `.replace(/\n/g, '%0A');
+
+            // Buka WhatsApp
+            window.open(`https://wa.me/${WA_NUMBER}?text=${message}`, '_blank');
+        });
+    </script>
+</body>
+</html>
